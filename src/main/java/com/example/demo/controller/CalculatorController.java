@@ -21,22 +21,22 @@ public class CalculatorController {
 
     @GetMapping("/sum")
     public String sum(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
-        return this.calculatorService.sum(num1, num2);
+        return num1+"+"+num2+"="+this.calculatorService.sum(num1, num2);
     }
 
     @GetMapping("/subtract")
     public String subtract(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
-        return this.calculatorService.subtract(num1, num2);
+        return num1+"-"+num2+"="+this.calculatorService.subtract(num1, num2);
     }
 
     @GetMapping("/multiply")
     public String multiply(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
-        return this.calculatorService.multiply(num1, num2);
+        return num1+"*"+num2+"="+this.calculatorService.multiply(num1, num2);
     }
 
     @GetMapping("/divide")
     public String divide(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
-        return this.calculatorService.divide(num1, num2);
+        return num1+"/"+num2+"="+this.calculatorService.divide(num1, num2);
     }
 
     @ExceptionHandler(value = NumberIsNullException.class)

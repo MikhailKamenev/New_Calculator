@@ -9,31 +9,27 @@ public class CalculatorService {
         return "Welcome to Calculator";
     }
 
-    public String sum(double num1, double num2) {
+    public double sum(double num1, double num2) {
         isNull(num1,num2);//проверка на null
-        double result = num1+num2;
-        return num1+"+"+num2+"="+result;
+        return num1+num2;
     }
 
-    public String subtract(double num1, double num2) {
+    public double subtract(double num1, double num2) {
         isNull(num1, num2);
-        double result = num1-num2;
-        return num1+"-"+num2+"="+result;
+        return num1-num2;
     }
 
-    public String multiply(double num1, double num2) {
+    public double multiply(double num1, double num2) {
         isNull(num1, num2);
-        double result = num1*num2;
-        return num1 + "*" + num2 + "=" + result;
+        return num1*num2;
     }
 
-    public String divide(double num1, double num2) {
+    public double divide(double num1, double num2) {
         isNull(num1, num2);
         if (num2 == 0) {
             throw new NumberIsNullException("Делить на ноль нельзя");
         }
-        double result = num1/num2;
-        return num1+"/"+num2+"="+result;
+        return num1/num2;
     }
 
     private void isNull(Double num1, Double num2) {
